@@ -1,0 +1,23 @@
+int digitalPin = 3; 
+int analogPin = A0; 
+int digitalVal; 
+int analogVal;
+
+void setup()
+{
+  pinMode(digitalPin, INPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+  analogVal = analogRead(analogPin); 
+  Serial.println(analogVal);
+  if (digitalVal == LOW)
+  {
+    digitalWrite(led, HIGH);
+  }
+  else
+  {
+    digitalWrite(led, LOW);
+  }
+}
